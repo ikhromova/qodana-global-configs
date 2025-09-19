@@ -1,0 +1,5 @@
+configurations:
+    - id: custom
+      name: Custom
+      description: Configurations used for IntelliJ platform based projects
+      qodanaYaml: custom.yaml
