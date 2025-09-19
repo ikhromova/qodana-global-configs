@@ -1,0 +1,54 @@
+profile:
+  base:
+    name: qodana.recommended
+
+  inspections:
+    - inspection: StringBufferReplaceableByString
+      enabled: true
+    - group: "category:Java/Probable bugs"
+      enabled: true
+failThreshold: 1
+
+customDependencies:
+  - name: ".babelrc JSON Schema (.babelrc-schema.json)"
+    version: "JSON schema for Babel 7+ configuration files"
+    licenses:
+      - key: "MIT"
+        url: "https://github.com/SchemaStore/schemastore/blob/master/LICENSE"
+
+projectJDK: 8
+disableSanityInspections: false
+php:
+  version: "8.3"
+
+fixesStrategy: cleanup
+
+licenseRules:
+  - keys:
+      - "MIT"
+    prohibited:
+      - "BSD-3-CLAUSE-NO-CHANGE"
+    allowed:
+      - "ISC2"
+
+  - keys:
+      - "Apache-2.0"
+    prohibited:
+      - "BSD-3-CLAUSE-NO-CHANGE"
+
+dependencyIgnores:
+  - name: "senry"
+  - name: "enry"
+
+failureConditions:
+  severityThresholds:
+    any: 1 # Total problems
+    critical: 1 # Critical and other severities
+    high: 1
+    moderate: 1
+    low: 1
+    info: 1 # Fresh code coverage
+  testCoverageThresholds:
+    fresh: 1
+    total: 1
+bootstrap: echo "root"
