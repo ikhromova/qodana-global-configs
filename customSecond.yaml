@@ -9,7 +9,7 @@ profile:
 failThreshold: 1
 
 customDependencies:
-  - name: ".babelrc JSON Schema (.babelrc-schema.json)"
+  - name: "Custom Second .babelrc JSON Schema (.babelrc-schema.json)"
     version: "JSON schema for Babel 7+ configuration files"
     licenses:
       - key: "MIT"

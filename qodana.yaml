@@ -1,0 +1,7 @@
+profile:
+  base:
+    name: qodana.starter
+failThreshold: 2
+
+customDependencies:
+  - name: "CUSTOM
